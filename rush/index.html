@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Team Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    section {
+      padding: 60px 0;
+    }
+    .profile-img {
+      width: 120px;
+      border-radius: 50%;
+    }
+    .person-section {
+      border-top: 1px solid #ccc;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Team Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#person1">Person 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#person2">Person 2</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Summary / Landing Section -->
+<section class="text-center bg-light">
+  <div class="container">
+    <h1 class="mt-4">Welcome to Our Portfolio</h1>
+    <p class="lead">Click below to view each person's portfolio</p>
+    <a href="#person1" class="btn btn-primary m-2">Portfolio: Person 1</a>
+    <a href="#person2" class="btn btn-secondary m-2">Portfolio: Person 2</a>
+  </div>
+</section>
+
+<!-- Person 1 Portfolio -->
+<section id="person1" class="person-section">
+  <div class="container text-center">
+    <h2>Person 1: Porsche</h2>
+    <img src="https://i.postimg.cc/YCh1YS7t/coding-reader.jpg" alt="Person 1 Photo" class="profile-img my-3">
+    <p>Hi, My name is Rinrada Pattharo. I'm 18 years old.
+      My birth date is 01/04/2007 I'm currently studying Department of Economics and Management at the Faculty of Business Administration, King Mongkut's Institute of Technology Ladkrabang (KMITL)
+      my hobby is listen to music."</p>
+    
+    
+    <h4>Skills</h4>
+    <p>I'm good at comunication.</p>
+
+    <h4>Showcase</h4>
+    <ul>
+      <li><div>
+        <img src="https://i.postimg.cc/MpxQSN61/IMG-1382.jpg" width="300" />
+        <img src="https://i.postimg.cc/RFzrs7QC/IMG-1429.png" width="300" />
+        <img src="https://i.postimg.cc/ZndTBbc0/IMG-1400.jpg" width="300" />
+      </div>
+      
+    </ul>
+
+    <h4>Contact</h4>
+    <p>
+      <a href="https://www.instagram.com/snowdropinhere/" target="_blank">Instagram</a> |
+      <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-20-25-sep-2025-porsche1450" target="_blank">Github</a>
+    </p>
+  </div>
+</section>
+
+<!-- Person 2 Portfolio -->
+<section id="person2" class="person-section bg-light">
+  <div class="container text-center">
+    <h2>Person 2: Naia</h2>
+    <img src="https://i.postimg.cc/QMMnB7NS/coding-member.jpg" alt="Person 2 Photo" class="profile-img my-3">
+    <p>Hello! My name is Anchareeporn Nilphay. I'm 18 years old. My birth date is 10/05/2007.
+      My hobby is Drawing, Read a novel and listen to music. I'm currently studying Department of Economics and Management at the Faculty of Business Administration, King Mongkut's Institute of Technology Ladkrabang (KMITL)
+    </p>
+    
+    
+    <h4>Skills</h4>
+    <p>I enjoy approaching problems with logical and analytical thinking.</p>
+
+    <h4>Showcase</h4>
+    <ul>
+      <li><img src="https://i.postimg.cc/x8h35RMt/IMG-4250.jpg" width="300" />
+      <img src="https://i.postimg.cc/wjhQ5DvQ/IMG-4251.jpg" width="300" />
+    <img src="https://i.postimg.cc/Nft8xpyC/IMG-4252.jpg" width="300" /></li>
+      
+    </ul>
+
+    <h4>Contact</h4>
+    <p>
+      <a href="https://www.instagram.com/justcallnaia/" target="_blank">instagram</a> |
+      <a href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-20-25-sep-2025-68100516-crypto" target="_blank">Github</a> 
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-3 bg-dark text-white">
+  &copy; 2025 Your Team. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
