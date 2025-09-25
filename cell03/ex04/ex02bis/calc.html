@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f5f5;
+    }
+
+    .calculator {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    input, select {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Basic Calculator</h2>
+    <form onsubmit="calculate(event)">
+      <input type="text" id="num1" placeholder="Left number" required />
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+      </select>
+      <input type="text" id="num2" placeholder="Right number" required />
+      <br />
+      <input type="submit" value="Try me!" />
+    </form>
+  </div>
+
+  <script>
+    function isPositiveInteger(value) {
+      return /^\d+$/.test(value); // เช็คว่าเป็นตัวเลขจำนวนเต็มบวก (รวม 0)
+    }
+
+    function calculate(event) {
+      event.preventDefault(); // ป้องกันการ reload หน้า
+
+      const num1Str = document.getElementById("num1").value.trim();
+      const num2Str = document.getElementById("num2").value.trim();
+      const operator = document.getElementById("operator").value;
+
+      if (!isPositiveInteger(num1Str) || !isPositiveInteger(num2Str)) {
+        alert("Error :(");
+        return;
+      }
+
+      const num1 = parseInt(num1Str, 10);
+      const num2 = parseInt(num2Str, 10);
+
+      // ตรวจสอบหารหรือ mod ด้วย 0
+      if ((operator === "/" || operator === "%") && num2 === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      let result;
+
+      switch (operator) {
+        case "+":
+          result = num1 + num2;
+          break;
+        case "-":
+          result = num1 - num2;
+          break;
+        case "*":
+          result = num1 * num2;
+          break;
+        case "/":
+          result = num1 / num2;
+          break;
+        case "%":
+          result = num1 % num2;
+          break;
+        default:
+          alert("Unknown operator");
+          return;
+      }
+
+      alert("Result: " + result);
+      console.log("Result: " + result);
+    }
+
+    // Alert ทุกๆ 30 วินาที
+    setInterval(() => {
+      alert("Please, use me...");
+    }, 30000);
+  </script>
+</body>
+</html>
